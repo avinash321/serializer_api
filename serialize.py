@@ -25,6 +25,10 @@ Pydantic Model / dataclass  -->   object  User(name="Avinash") → {"name": "Avi
 Custom Class (non-Pydantic) -->   Not JSON serializable  --> You must convert it manually (e.g. return my_obj.__dict__)
 datetime, date, time        -->   string (ISO format)    --> datetime(2025, 10, 27) → "2025-10-27T00:00:00"
 Decimal, UUID               -->   string or number (depending) --> Decimal("2.5") → 2.5, UUID("...") → "..."
+
+
+response.text	 -->  str	-->   Raw response body as a string
+response.json()	 -->  dict, list, int, float, bool, or None  --> Parsed JSON converted to Python type
 """
 
 # Defining a Pydantic model
